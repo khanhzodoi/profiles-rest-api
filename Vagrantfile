@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
 
     ubuntu.vm.network "forwarded_port", host_ip: "127.0.0.1", guest: 8080, host: 1234
     ubuntu.vm.provider "virtualbox" do |vb|
-      vb.cpus = 3
+      vb.cpus = 6
       vb.memory = "6144"
     end
     ubuntu.vm.provision "shell", inline: <<-SHELL
